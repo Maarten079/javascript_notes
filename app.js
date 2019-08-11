@@ -124,7 +124,7 @@ console.clear();
 // Section 2 - 8 Type conversion
 
 // Number to string
-let val = 5;
+var val = 5;
 console.log(typeof val);
 val = String(val);
 console.log(typeof val);
@@ -302,7 +302,7 @@ console.log(val);
 // Section 2 - 11 Template literals (ES6)
 
 const name5 = "John";
-const age1 = 30;
+const age = 30;
 const job = "webdev";
 const city = "Zoetermeer";
 
@@ -310,9 +310,69 @@ const city = "Zoetermeer";
 val = `
 <ul>
   <li>Name: ${name5}</li>
-  <li>Age: ${age1}</li>
+  <li>Age: ${age}</li>
   <li>Job: ${job}</li>
   <li>City: ${city}</li>
   <li>${age > 30 ? "Over 30" : "Under 30"}</li>
 </ul>  
 `;
+
+// Section 2 - 12 Arrays and array methods
+
+// Create an array
+var array1 = [1, 2, 3, 4];
+var array2 = new Array(1, "apple", NaN, undefined, true, new Date());
+
+// Check if is array
+val = Array.isArray(array);
+console.log(val);
+
+// Get single value
+console.log(array1[0]);
+
+// Insert into array
+array1[2] = 500;
+
+// Find index of value
+val = array1.indexOf(500);
+console.log(val);
+
+// Add to end of array
+array1.push(250);
+console.log(array1);
+
+// Add to front of array
+array1.unshift(120);
+console.log(array1);
+
+// Take off from end
+array1.pop();
+console.log(array1);
+
+// Take off from front
+array1.shift();
+console.log(array1);
+
+// Splice out from index in array
+array1.splice(1, 3);
+console.log(array1);
+
+// Reverse array
+array1.reverse();
+console.log(array1);
+
+// Concatenate array
+array1 = array1.concat(array2);
+console.log(array1);
+
+// Sorting arrays
+array1 = [2, 3, 1, 4];
+array1.sort();
+console.log(array1);
+
+// Find a number
+function under50(num) {
+  return num > 50;
+}
+val = array1.find(under50);
+console.log(val);

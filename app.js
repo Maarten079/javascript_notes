@@ -372,7 +372,25 @@ console.log(array1);
 
 // Find a number
 function under50(num) {
-  return num > 50;
+  return num < 50;
 }
 val = array1.find(under50);
+console.log(val);
+
+// Section 2 - 13 Object literals
+const person1 = {
+  firstName: "Steve",
+  lastName: "Smith",
+  age: "30",
+  adress: {
+    city: "Zoetermeer",
+    street: "Kadelaan"
+  },
+  getBirthYear: function() {
+    return 2019 - this.age;
+  }
+};
+val = person;
+console.log(val);
+val = person.name;
 console.log(val);

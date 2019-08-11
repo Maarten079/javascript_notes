@@ -189,3 +189,112 @@ const val2 = 6;
 const sum = val1 + val2;
 console.log(sum);
 console.log(sum);
+
+// Clear console
+console.clear();
+
+// Section 2 - 9 Numbers & Math Object
+
+// Simple math with numbers
+const num1 = 5;
+const num2 = 7;
+
+val = num1 + num2;
+val = num1 - num2;
+val = num1 * num2;
+val = num1 / num2;
+val = num1 % num2;
+
+// Math object
+// Methods are static, Math object does not need to be initialized / assigned
+
+val = Math.PI;
+val = Math.E;
+val = Math.round(2.9);
+val = Math.ceil(2.4);
+val = Math.floor(2.6);
+val = Math.sqrt(9);
+val = Math.abs(-3);
+val = Math.pow(2, 8); // Second number is the square
+val = Math.min(2, 33, -5, 2);
+val = Math.max(2, 33, -5, 2);
+
+// Generate a random number between 0 and 1
+val = Math.random();
+
+// Generate a random number between 0 and 10
+val = Math.random() * 10 + 1;
+
+// Generate a whole random number between 0 and 10
+val = Math.floor(Math.random() * 10 + 1);
+
+console.log(val);
+
+// Clear console
+console.clear();
+
+// Section 2 - 10 String methods and Concatenation
+
+// Concatenate a string, put multiple strings together
+firstName = "John";
+const lastName = "Doe";
+val = firstName + " " + lastName;
+console.log(val);
+
+// Concat()
+val = firstName.concat(" ", lastName);
+console.log(val);
+
+// Append, add on to something
+val = "John ";
+val += "Doe";
+console.log(val);
+
+// Escaping characters
+val = 'It\'s what I qoute "this" ';
+
+// Convert string to uper/lowecase
+val = firstName.toLowerCase();
+console.log(val);
+val = firstName.toUpperCase();
+console.log(val);
+
+// Select character in string
+val = firstName[0];
+console.log(val);
+
+// charAt()
+val = firstName.charAt("2");
+console.log(val);
+
+// Get last char
+val = firstName.charAt(firstName.length - 1);
+console.log(val);
+
+// Find first / last index of character
+val = firstName.indexOf("j"); // Must match upper / lowercase.
+console.log(val);
+val = firstName.lastIndexOf("n"); // Must match upper / lowercase.
+console.log(val);
+
+// Get a substring from a string
+val = firstName.substring(0, 2);
+console.log(val);
+
+// Slice
+val = firstName.slice(0, 2);
+val = firstName.slice(-3); // Take the last 3 characters
+console.log(val);
+
+// Split string in array
+str = "Hi my name is John";
+val = str.split(" ");
+console.log(val);
+
+// Replace a substring with another substring
+val = str.replace("John", "Maarten");
+console.log(val);
+
+// Check string for substring
+val = str.includes("John");
+console.log(val);

@@ -298,3 +298,21 @@ console.log(val);
 // Check string for substring
 val = str.includes("John");
 console.log(val);
+
+// Section 2 - 11 Template literals (ES6)
+
+const name5 = "John";
+const age1 = 30;
+const job = "webdev";
+const city = "Zoetermeer";
+
+// Template literals `${var}`
+val = `
+<ul>
+  <li>Name: ${name5}</li>
+  <li>Age: ${age1}</li>
+  <li>Job: ${job}</li>
+  <li>City: ${city}</li>
+  <li>${age > 30 ? "Over 30" : "Under 30"}</li>
+</ul>  
+`;

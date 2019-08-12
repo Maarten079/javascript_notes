@@ -721,3 +721,44 @@ for (let b = 0; a < 10; a++) {
 test();
 
 console.log(`Global scope: ${a} ${b} ${c}`);
+
+// Clear console
+console.clear();
+
+// Section 3 - 22 What is the DOM?
+
+// Select the document
+val = document;
+console.log(val);
+
+// Select the document as HTML collection
+val = document.all;
+console.log(val);
+
+// Select item in HTML collection
+val = val[2];
+console.log(val);
+
+// Select the head/body of document
+val = document.head;
+console.log(val);
+
+// Select forms
+val = document.forms;
+console.log(val);
+
+// Select links
+val = document.links;
+console.log(val);
+
+// Get attribute
+val = document.scripts[2].getAttribute("src");
+console.log(val);
+
+// Convert HTMLcollection to Array
+let scripts = document.scripts;
+scripts = Array.from(scripts);
+console.log(scripts);
+
+// Clear console
+console.clear();

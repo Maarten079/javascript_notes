@@ -378,6 +378,8 @@ val = array1.find(under50);
 console.log(val);
 
 // Section 2 - 13 Object literals
+
+// Create an object
 const person1 = {
   firstName: "Steve",
   lastName: "Smith",
@@ -390,7 +392,332 @@ const person1 = {
     return 2019 - this.age;
   }
 };
+
+// Modify an attribute
 val = person;
 console.log(val);
 val = person.name;
 console.log(val);
+
+//Clear the console
+console.clear();
+
+// Section 2 - 14 Dates and times
+
+// Create a date of today
+let today = new Date();
+console.log(today);
+console.log(typeof today);
+
+// Convert date to string
+today = today.toString();
+console.log(today);
+console.log(typeof today);
+
+// Create a custom date
+today = new Date("01-14-1992");
+today = new Date("January 14 1992 12:05:00");
+console.log(today);
+console.log(typeof today);
+
+// Get month (0 based)
+val = today.getMonth();
+console.log(val);
+console.log(typeof val);
+
+// Get day of the month (not 0 based)
+val = today.getDate();
+console.log(val);
+console.log(typeof val);
+
+// Get year
+val = today.getFullYear();
+console.log(val);
+console.log(typeof val);
+
+// Set month (or other parameters)
+today.setDate(2);
+console.log(today);
+console.log(typeof today);
+
+// Section 2 - 15 If statements and comparison operators
+
+// IF statement
+let meetsRequirement;
+if (meetsRequirement) {
+  console.log("do this");
+} else {
+  console.log("do this");
+}
+
+// Equal to value (true)
+if (meetsRequirement == true) {
+  console.log("do this");
+} else {
+  console.log("do this");
+}
+
+// Equal to value (true) and type (boolean)
+if (meetsRequirement === true) {
+  console.log("do this");
+} else {
+  console.log("do this");
+}
+
+// Check if undefined
+if (typeof id !== "undefined") {
+  console.log("do this");
+} else {
+  console.log("do this");
+}
+
+// Greater of less than
+if (age > 30) {
+  console.log("do this");
+} else {
+  console.log("do this");
+}
+
+// Else if
+if (age < 30) {
+  console.log("You're young");
+} else if (age > 30 && age < 60) {
+  console.log("You're less young");
+} else {
+  console.log("You're old");
+}
+
+// AND && and OR ||
+if (age < 30 || name === "Maarten") {
+  console.log("do something");
+} else if (age > 30 && name === "Maarten") {
+  console.log("do something");
+}
+
+// Ternary operator
+console.log(age === 30 ? "Correct" : "Incorrect");
+
+// Section 2 - 16 Switches
+
+// Create a switch
+const color = "red";
+
+switch (color) {
+  case "red":
+    console.log("Color is red");
+    break;
+  case "blue":
+    console.log("Color is blue");
+    break;
+  case "yellow":
+    console.log("Color is yellow");
+    break;
+  default:
+    console.log("Color is not red, blue or yellow");
+    break;
+}
+
+// Clear the console
+console.clear();
+
+// Section 2 - 17 Functions & Expressions
+
+// Create a function
+function greet() {
+  console.log("Hello");
+}
+
+// Calling a function
+greet();
+
+// Passing in parameters
+function greet2(parameter) {
+  console.log(`Hello ${parameter}`);
+}
+greet2("Maarten");
+
+// Defining defaults
+function greet3(firstName = "John", lastName = "Doe") {
+  console.log(`Hello ${firstName} ${lastName}`);
+}
+greet3();
+
+// Function expressions
+const square = function(x = 2) {
+  return x * x;
+};
+console.log(square(3));
+
+// Immediately invocable function expressions - IFFEs
+(function() {
+  console.log("IFFE Ran..");
+})();
+
+// Function inside object (called a method)
+const todo = {
+  add: function() {
+    console.log("Add todo");
+  }
+};
+todo.add();
+
+// Function outside of object
+todo.delete = function() {
+  console.log("delete todo");
+};
+
+// Clear console
+console.clear();
+
+// Section 2 - 18 General loops
+
+// FOR loop
+for (let x = 0; x < 10; x++) {
+  if (x === 2) {
+    console.log("2 is my favourite number, continue at 3");
+    continue; // Go to the next iteration
+  }
+  console.log("Number", x);
+
+  if (x === 9) {
+    console.log("Stop the loop");
+    break; // Breaks the loop
+  }
+}
+
+// WHILE loop
+let i = 0;
+
+while (i < 10) {
+  console.log("Number " + i);
+  i++;
+}
+
+// DO WHILE loop (always runs 1 time)
+
+let j = 0;
+
+do {
+  console.log("number " + j);
+  j++;
+} while (j < 0);
+
+// FOREACH loop
+const cars = ["ford", "chevy", "honda", "toyota"];
+cars.forEach(function(car, index) {
+  console.log(index + " " + car);
+});
+
+// Map
+const users = [
+  { id: 1, name: "John" },
+  { id: 2, name: "Sarah" },
+  { id: 3, name: "Karen" }
+];
+
+const ids = users.map(function(user) {
+  return user.id;
+});
+
+console.log(ids);
+
+//FOR IN
+const user1 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 40
+};
+
+for (let x in user1) {
+  console.log(`${x} : ${user1[x]}`);
+}
+
+// Clear console
+console.clear();
+
+// Section 2 - 19 A look at the window object
+
+// Window methods / object / properties
+
+// // Alert
+// window.alert("Hello World");
+
+// // Prompt
+// const input = prompt();
+// alert(input);
+
+// // Confirm
+// if (confirm("Are you sure?")) {
+//   console.log("yes");
+// } else {
+//   console.log("no");
+// }
+
+// Get outer height and width
+val = window.outerHeight;
+console.log(val);
+val = window.outerWidth;
+console.log(val);
+
+// Inner height and width
+val = window.innerHeight;
+console.log(val);
+val = window.innerWidth;
+console.log(val);
+
+// Scroll point
+val = window.scrollY;
+
+// Location object
+val = window.location;
+console.log(val);
+
+// // Redirect
+// window.location.href = "http://google.com";
+
+// // Reload
+// window.location.reload();
+
+// // History Object
+// window.history.go(-2);
+
+// Navigator Object
+val = window.navigator;
+console.log(val);
+
+// Clear console
+console.clear();
+
+// Section 2 - 20 Block scope with let and const
+
+// Global scope
+var a = 1;
+let b = 1;
+const c = 1;
+
+console.log(`Global scope: ${a} ${b} ${c}`);
+
+// Function scope
+function test() {
+  var a = 2;
+  let b = 2;
+  const c = 2;
+
+  console.log(`Function scope: ${a} ${b} ${c}`);
+}
+
+// Block level scope
+if (true) {
+  var a = 3;
+  let b = 3;
+  const c = 3;
+  console.log(`Block scope: ${a} ${b} ${c}`);
+}
+
+for (let b = 0; a < 10; a++) {
+  console.log(`loop: ${a}`);
+}
+
+test();
+
+console.log(`Global scope: ${a} ${b} ${c}`);
